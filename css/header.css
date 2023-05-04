@@ -37,7 +37,15 @@ header img {
 .navegacao a:hover::after {
   width: 100%;
 }
-
+@keyframes slide {
+  from {
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
 /*Mobile*/
 @media (max-width: 800px) {
   .navegacao {
@@ -55,5 +63,9 @@ header img {
     height: 100%;
     padding: 60px;
     box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.481);
+    animation-name: slide;
+    animation-duration: 0.7s;
+    transform: translateX(70px);
+    animation-fill-mode: forwards;
   }
 }
